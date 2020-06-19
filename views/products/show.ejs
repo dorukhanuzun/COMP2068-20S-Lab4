@@ -1,0 +1,32 @@
+<%- include ('../partials/header') %> 
+<div class="container my-5">
+  <header>
+    <h1>Your Product Details</h1>
+  </header>
+  <hr>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Product Description</th>
+      <th scope="col">Product Price</th>
+      <th scope="col">Update Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td style="text-align: center;"><%= product.name %></td>
+      <td style="text-align: center;"><%- product.description %></td>
+      <td style="text-align: center;"><%- product.price %></td>
+      <td style="text-align: center;"><%= (product.updatedAt.toLocaleString("en-CA")) %></td>
+    </tr>
+  </tbody>
+</table>
+<%- include('../partials/footer') %>
+
+
+
+  
